@@ -1,0 +1,68 @@
+﻿<Window x:Class="Dixit.UI.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        x:Name="mainWindow"
+        AllowsTransparency="True" 
+        Background="Transparent"
+        WindowStyle="None"
+        Title="{Binding Title}" 
+        Height="350" 
+        Width="525">
+    <Border CornerRadius="20" Background="WhiteSmoke">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Title Bar-->
+            <Border 
+                Background="#49a078"  
+                CornerRadius="20,20,0,0" 
+                Grid.ColumnSpan="3" 
+
+                MouseDown="Border_MouseDown">
+                <Grid>
+                    <TextBlock 
+                        Text="{Binding Title, ElementName=mainWindow}"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center" 
+                        Foreground="White"
+                        FontSize="22"
+                        FontWeight="Bold"/>
+                    <!--Windows Buttons-->
+                    <StackPanel
+                        HorizontalAlignment="Right"
+                        Margin="10,0 "
+                        Orientation="Horizontal">
+                        <Button x:Name="btnMinimize"
+                                Content="{StaticResource minimize}"
+                                Click="btnMinimize_Click"
+                                Style="{StaticResource IconButtonStyle}"/>
+                        <Button x:Name="btnMaximize"
+                                Content="{StaticResource maximize}"
+                                Click="btnMaximize_Click"
+                                Style="{StaticResource IconButtonStyle}"/>
+                        <Button x:Name="btnClose"
+                                Content="{StaticResource close}"
+                                Click="btnClose_Click"
+                                Style="{StaticResource IconButtonStyle}"/>
+
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="1">
+                <ContentControl prism:RegionManager.RegionName="PlayerCards" />
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
