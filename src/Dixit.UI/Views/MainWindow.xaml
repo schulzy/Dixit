@@ -8,8 +8,8 @@
         Background="Transparent"
         WindowStyle="None"
         Title="{Binding Title}" 
-        Height="350" 
-        Width="525">
+        Height="600" 
+        Width="800">
     <Border CornerRadius="20" Background="WhiteSmoke">
         <Grid>
             <Grid.RowDefinitions>
