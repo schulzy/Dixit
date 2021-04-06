@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DixitServer", "DixitServer\DixitServer.csproj", "{71637250-C651-48F8-AE4B-3ED27BDBAD0B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dixit.UI", "Dixit.UI\Dixit.UI.csproj", "{74A678B6-6F3E-4B84-AB0B-12CF328EB335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dixit.UI", "..\Dixit.UI\Dixit.UI.csproj", "{74A678B6-6F3E-4B84-AB0B-12CF328EB335}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{5DAB8193-BE01-4077-B711-CC043110EF5B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayerCards", "PlayerCards\PlayerCards.csproj", "{9318CE89-9877-449B-A132-46BC8F858888}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayerCards", "..\PlayerCards\PlayerCards.csproj", "{9318CE89-9877-449B-A132-46BC8F858888}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +17,7 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{71637250-C651-48F8-AE4B-3ED27BDBAD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71637250-C651-48F8-AE4B-3ED27BDBAD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71637250-C651-48F8-AE4B-3ED27BDBAD0B}.Debug|x64.ActiveCfg = Debug|x64
-		{71637250-C651-48F8-AE4B-3ED27BDBAD0B}.Debug|x64.Build.0 = Debug|x64
-		{71637250-C651-48F8-AE4B-3ED27BDBAD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71637250-C651-48F8-AE4B-3ED27BDBAD0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71637250-C651-48F8-AE4B-3ED27BDBAD0B}.Release|x64.ActiveCfg = Release|x64
-		{71637250-C651-48F8-AE4B-3ED27BDBAD0B}.Release|x64.Build.0 = Release|x64
+		
 		{74A678B6-6F3E-4B84-AB0B-12CF328EB335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74A678B6-6F3E-4B84-AB0B-12CF328EB335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74A678B6-6F3E-4B84-AB0B-12CF328EB335}.Debug|x64.ActiveCfg = Debug|x64
