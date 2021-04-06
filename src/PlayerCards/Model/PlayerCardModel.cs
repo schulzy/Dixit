@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Media.Imaging;
 
 namespace PlayerCards.Model
@@ -10,6 +8,6 @@ namespace PlayerCards.Model
         public int CardId { get; set; }
         public int Edition { get; set; }
         public Uri Image { get; set; }
-        public BitmapFrame BitmapFrame {get;set;}
+        public BitmapImage BitmapImage { get;set;}
     }
 }
