@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Reflection;
 
 namespace DixitServer.Controllers
 {
@@ -12,10 +14,12 @@ namespace DixitServer.Controllers
     [ApiController]
     public class CardController : ControllerBase
     {
+        Random _rnd = new Random();
+
         [HttpGet]
         public IActionResult Get()
         {
-            var file = @"d:\WS\Dixit\src\PlayerCards\Assets\dixit_0009.jpg";
+            string file = GetRandomFilePath();
             using var stream = new MemoryStream(System.IO.File.ReadAllBytes(file).ToArray());
 
             var formFile = new FormFile(stream, 0, stream.Length, null, file.Split(@"\").Last())
@@ -35,5 +39,24 @@ namespace DixitServer.Controllers
             return File(fileData, "image/jpeg");
         }
 
+        private string GetRandomFilePath()
+        {
+            var paths = Directory.GetFiles(Path.Combine(AssemblyDirectory, "Cards"));
+
+            int num = paths.Length;
+
+            return paths[_rnd.Next(0, num - 1)];
+        }
+
+        public static string AssemblyDirectory
+        {
+            get
+            {
+                string codeBase = Assembly.GetExecutingAssembly().CodeBase;
+                UriBuilder uri = new UriBuilder(codeBase);
+                string path = Uri.UnescapeDataString(uri.Path);
+                return Path.GetDirectoryName(path);
+            }
+        }
     }
 }

@@ -30,13 +30,10 @@ namespace PlayerCards.ViewModels
         {
             PlayerCards = new ObservableCollection<PlayerCardModel>();
             PlayerTexts = new ObservableCollection<string>();
-            PlayerTexts.Add("dsfdsf");
             GetNewCardCommand = new DelegateCommand(GetNewCard, CanGetNewCard);
             Message = "View A from your Prism Module";
             string fullPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
             string assemblyPath = Path.GetDirectoryName(fullPath);
-            PlayerCards.Add(new PlayerCardModel() { CardId = 1, Edition = 1, Image = new System.Uri(Path.Combine(assemblyPath, "Assets/dixit_0034.jpg")) });
-            PlayerCards.Add(new PlayerCardModel() { CardId = 2, Edition = 1, Image = new System.Uri(Path.Combine(assemblyPath, "Assets/hatlap.jpg")) });
         }
 
         public bool CanGetNewCard()

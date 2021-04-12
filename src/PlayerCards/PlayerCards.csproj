@@ -1,31 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UseWPF>true</UseWPF>
-    <AssemblyName>PlayerCards</AssemblyName>
-    <Platforms>AnyCPU;x64</Platforms>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutputPath>..\..\bin\Debug</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutputPath>..\..\bin\Release</OutputPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Assets\dixit_0034.jpg" />
-    <None Remove="Assets\hatlap.jpg" />
-    <None Remove="Views\PlayerCardsView.xaml~RF4fdb0719.TMP" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\dixit_0034.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\hatlap.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
-    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<AssemblyName>PlayerCards</AssemblyName>
+		<Platforms>AnyCPU;x64</Platforms>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<OutputPath>..\..\bin\Debug</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<OutputPath>..\..\bin\Release</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>..\..\bin\Debug</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>..\..\bin\Release</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Assets\hatlap.jpg" />
+		<None Remove="Views\PlayerCardsView.xaml~RF4fdb0719.TMP" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="Assets\hatlap.jpg">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+		<PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+	</ItemGroup>
 </Project>
