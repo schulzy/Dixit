@@ -1,5 +1,5 @@
 ﻿using Dixit.UI.Views;
-using PlayerCards.Views;
+using Dixit.PlayerCards.Views;
 using Prism.Ioc;
 using Prism.Regions;
 using System.Windows;

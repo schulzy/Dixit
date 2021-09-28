@@ -1,7 +1,7 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
 
-namespace PlayerCards
+namespace Dixit.PlayerCards
 {
     public class PlayerCardsModule : IModule
     {

@@ -1,11 +1,12 @@
-﻿<UserControl x:Class="PlayerCards.Views.PlayerCardsView"
+﻿<UserControl x:Class="Dixit.PlayerCards.Views.PlayerCardsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PlayerCards.Views"
+             xmlns:local="clr-namespace:Dixit.PlayerCards.Views"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
-             xmlns:prism="http://prismlibrary.com/" xmlns:viewmodels="clr-namespace:PlayerCards.ViewModels"
+             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:viewmodels="clr-namespace:Dixit.PlayerCards.ViewModels"
              prism:ViewModelLocator.AutoWireViewModel="True" 
              Width="800"
              Height="500">
@@ -27,23 +28,14 @@
                 <Button MinHeight="20" MinWidth="20">
                     <Image Source="{Binding BitmapImage}"/>
                 </Button>
+                <TextBlock  Text="{Binding HashCode}"/>
+                <Button Content="Delete" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}, Path=DataContext.DeleteCardCommand}" CommandParameter="{Binding}"/>
             </StackPanel>
-        </DataTemplate>
-
-        <DataTemplate x:Key="TbTemplate" >
-            <TextBlock Text="dsadas"/>
         </DataTemplate>
         
     </UserControl.Resources>
     <StackPanel>
         <ItemsControl ItemTemplate="{StaticResource cardTemplate}" ItemsSource="{Binding Path=PlayerCards}">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
-        <ItemsControl ItemTemplate="{StaticResource TbTemplate}" ItemsSource="{Binding Path=PlayerTexts}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal"/>

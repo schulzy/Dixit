@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace PlayerCards.Views
+namespace Dixit.PlayerCards.Views
 {
     /// <summary>
     /// Interaction logic for ViewA.xaml
